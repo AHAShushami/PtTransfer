@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table 2 — Referring &amp; Accepting Hospital Type, 2023–2025</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 28px 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(31,56,100,0.10); padding: 28px 32px 20px; max-width: 900px; margin: 0 auto; }
+.fig-label { font-size: 11px; font-weight: 700; color: #1F3864; letter-spacing: 0.07em; margin-bottom: 2px; }
+.fig-title { font-size: 14px; font-style: italic; color: #222; margin-bottom: 16px; line-height: 1.5; }
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+.tab { padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; border: 2px solid #BDD7EE; color: #1F3864; background: #fff; }
+.tab.active { background: #1F3864; color: #fff; border-color: #1F3864; }
+.chart-view { display: none; }
+.chart-view.active { display: block; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #333; }
+.legend-box { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.note { margin-top: 14px; font-size: 11.5px; color: #666; border-top: 1px solid #e0eaf4; padding-top: 10px; line-height: 1.6; }
+.note strong { color: #1F3864; }
+</style>
+</head>
+<body>
+<div class="card">
+<div class="fig-label">Table 2 — Chart</div>
+<div class="fig-title">Referring and Accepting Hospital by Category and Frequency, 2023–2025</div>
+<div class="tabs">
+<button class="tab active" onclick="show('ref',this)">Referring Hospitals</button>
+<button class="tab" onclick="show('acc',this)">Accepting Hospitals</button>
+</div>
+<!-- REFERRING -->
+<div class="chart-view active" id="ref">
+<svg viewbox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" transform="rotate(-90,18,160)" x="18" y="160">Number of Transfers</text>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="80" y1="30" y2="260"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="660" y1="260" y2="260"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="264">0</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="220" y2="220"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="224">20</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="180" y2="180"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="184">40</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="140" y2="140"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="144">60</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="100" y2="100"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="104">80</text>
+<!-- 2023: MalGov=20(40px), ThaiGov=43(86px), ThaiPriv=13(26px), Others=1(2px) total=77 -->
+<rect fill="#2E74B5" height="40" rx="3" width="70" x="120" y="220"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="243">20</text>
+<rect fill="#00B0A0" height="86" rx="3" width="70" x="120" y="134"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="180">43</text>
+<rect fill="#ED7D31" height="26" rx="3" width="70" x="120" y="108"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="155" y="124">13</text>
+<rect fill="#7030A0" height="2" rx="2" width="70" x="120" y="106"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="98">77</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="155" y="280">2023</text>
+<!-- 2024: MalGov=29(58px), ThaiGov=47(94px), ThaiPriv=11(22px), Others=2(4px) total=89 -->
+<rect fill="#2E74B5" height="58" rx="3" width="70" x="300" y="202"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="234">29</text>
+<rect fill="#00B0A0" height="94" rx="3" width="70" x="300" y="108"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="158">47</text>
+<rect fill="#ED7D31" height="22" rx="3" width="70" x="300" y="86"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="335" y="100">11</text>
+<rect fill="#7030A0" height="4" rx="2" width="70" x="300" y="82"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="74">89</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="335" y="280">2024</text>
+<!-- 2025: MalGov=12(24px), ThaiGov=37(74px), ThaiPriv=7(14px), Others=0 total=56 -->
+<rect fill="#2E74B5" height="24" rx="3" width="70" x="480" y="236"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="251">12</text>
+<rect fill="#00B0A0" height="74" rx="3" width="70" x="480" y="162"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="202">37</text>
+<rect fill="#ED7D31" height="14" rx="3" width="70" x="480" y="148"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="515" y="158">7</text>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="140">56</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="515" y="280">2025</text>
+</svg>
+<div class="legend">
+<div class="legend-item"><div class="legend-box" style="background:#2E74B5"></div>Malaysian Government</div>
+<div class="legend-item"><div class="legend-box" style="background:#00B0A0"></div>Thai Government</div>
+<div class="legend-item"><div class="legend-box" style="background:#ED7D31"></div>Thai Private</div>
+<div class="legend-item"><div class="legend-box" style="background:#7030A0"></div>Others</div>
+</div>
+</div>
+<!-- ACCEPTING -->
+<div class="chart-view" id="acc">
+<svg viewbox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" transform="rotate(-90,18,160)" x="18" y="160">Number of Transfers</text>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="80" y1="30" y2="260"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="660" y1="260" y2="260"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="264">0</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="220" y2="220"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="224">20</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="180" y2="180"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="184">40</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="140" y2="140"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="144">60</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="100" y2="100"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="104">80</text>
+<!-- 2023: MalGov=41(82px), MalPriv=13(26px), ThaiGov=21(42px), ThaiPriv=0, Sing=2(4px) total=77 -->
+<rect fill="#2E74B5" height="82" rx="3" width="70" x="120" y="178"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="222">41</text>
+<rect fill="#375623" height="26" rx="3" width="70" x="120" y="152"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="155" y="168">13</text>
+<rect fill="#00B0A0" height="42" rx="3" width="70" x="120" y="110"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="134">21</text>
+<rect fill="#C00000" height="4" rx="2" width="70" x="120" y="106"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="98">77</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="155" y="280">2023</text>
+<!-- 2024: MalGov=28(56px), MalPriv=31(62px), ThaiGov=14(28px), ThaiPriv=1(2px) total=74 -->
+<rect fill="#2E74B5" height="56" rx="3" width="70" x="300" y="204"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="235">28</text>
+<rect fill="#375623" height="62" rx="3" width="70" x="300" y="142"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="176">31</text>
+<rect fill="#00B0A0" height="28" rx="3" width="70" x="300" y="114"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="335" y="131">14</text>
+<rect fill="#ED7D31" height="2" rx="2" width="70" x="300" y="112"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="104">74</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="335" y="280">2024</text>
+<!-- 2025: MalGov=24(48px), MalPriv=17(34px), ThaiGov=11(22px), Home=2(4px) total=55 -->
+<rect fill="#2E74B5" height="48" rx="3" width="70" x="480" y="212"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="239">24</text>
+<rect fill="#375623" height="34" rx="3" width="70" x="480" y="178"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="198">17</text>
+<rect fill="#00B0A0" height="22" rx="3" width="70" x="480" y="156"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="515" y="170">11</text>
+<rect fill="#7030A0" height="4" rx="2" width="70" x="480" y="152"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="144">55</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="515" y="280">2025</text>
+</svg>
+<div class="legend">
+<div class="legend-item"><div class="legend-box" style="background:#2E74B5"></div>Malaysian Government</div>
+<div class="legend-item"><div class="legend-box" style="background:#375623"></div>Malaysian Private</div>
+<div class="legend-item"><div class="legend-box" style="background:#00B0A0"></div>Thai Government</div>
+<div class="legend-item"><div class="legend-box" style="background:#ED7D31"></div>Thai Private</div>
+<div class="legend-item"><div class="legend-box" style="background:#C00000"></div>Singapore</div>
+<div class="legend-item"><div class="legend-box" style="background:#7030A0"></div>Home</div>
+</div>
+</div>
+<div class="note">
+<strong>Note.</strong> Thai Government hospitals remained the dominant referring entities (~64% by 2025).
+    Malaysian private hospitals surged to 41.9% of accepting transfers in 2024 before stabilising at 30.9% in 2025.
+    * Includes 2 cases discharged home. ** Discharged home directly from PoE.
+  </div>
+</div>
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.chart-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table 9 — Core Data Variables for Border Data Collection</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 28px 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(31,56,100,0.10); padding: 28px 32px 20px; max-width: 900px; margin: 0 auto; }
+.fig-label { font-size: 11px; font-weight: 700; color: #1F3864; letter-spacing: 0.07em; margin-bottom: 2px; }
+.fig-title { font-size: 14px; font-style: italic; color: #222; margin-bottom: 18px; line-height: 1.5; }
+.total-badge { display:inline-block; background:#1F3864; color:#fff; border-radius:20px; padding:4px 16px; font-size:13px; font-weight:700; margin-bottom:16px; }
+.domains-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin-bottom:20px; }
+.domain-card { border-radius:10px; padding:14px 10px; text-align:center; }
+.domain-card .count { font-size:26px; font-weight:700; }
+.domain-card .name { font-size:11px; font-weight:600; margin-top:4px; line-height:1.4; }
+.d1{background:#EBF3FB;color:#1F3864;} .d2{background:#E8F5F4;color:#00695C;}
+.d3{background:#FFF0E0;color:#C05000;} .d4{background:#E2EFDA;color:#375623;} .d5{background:#F0EBF8;color:#5B1F8A;}
+.tabs { display:flex; gap:8px; margin-bottom:16px; }
+.tab { padding:6px 16px; border-radius:20px; font-size:12px; font-weight:700; cursor:pointer; border:2px solid #BDD7EE; color:#1F3864; background:#fff; }
+.tab.active { background:#1F3864; color:#fff; border-color:#1F3864; }
+.chart-view { display:none; }
+.chart-view.active { display:block; }
+.note { margin-top:14px; font-size:11.5px; color:#666; border-top:1px solid #e0eaf4; padding-top:10px; line-height:1.6; }
+.note strong { color:#1F3864; }
+</style>
+</head>
+<body>
+<div class="card">
+<div class="fig-label">Table 9 — Chart</div>
+<div class="fig-title">Core Data Variables for Border Data Collection — Chapter V</div>
+<div class="total-badge">30 Variables Across 5 Domains</div>
+<div class="domains-grid">
+<div class="domain-card d1"><div class="count">6</div><div class="name">Patient Identity</div></div>
+<div class="domain-card d2"><div class="count">8</div><div class="name">Transfer Logistics</div></div>
+<div class="domain-card d3"><div class="count">5</div><div class="name">Clinical Information</div></div>
+<div class="domain-card d4"><div class="count">5</div><div class="name">Facility Information</div></div>
+<div class="domain-card d5"><div class="count">6</div><div class="name">Administrative</div></div>
+</div>
+<div class="tabs">
+<button class="tab active" onclick="show('bar',this)">Bar Chart</button>
+<button class="tab" onclick="show('donut',this)">Donut Chart</button>
+</div>
+<!-- BAR CHART -->
+<div class="chart-view active" id="bar">
+<svg viewbox="0 0 700 280" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" transform="rotate(-90,18,140)" x="18" y="140">Variables</text>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="80" y1="20" y2="220"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="660" y1="220" y2="220"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="224">0</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="195" y2="195"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="199">2</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="170" y2="170"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="174">4</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="145" y2="145"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="149">6</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="120" y2="120"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="124">8</text>
+<!-- Patient Identity: 6 vars → 150px bar -->
+<rect fill="#1F3864" height="150" rx="6" width="80" x="110" y="70"></rect>
+<text fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" x="150" y="148">6</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="150" y="240">Patient</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="150" y="253">Identity</text>
+<!-- Transfer Logistics: 8 vars → 200px bar -->
+<rect fill="#00B0A0" height="200" rx="6" width="80" x="220" y="20"></rect>
+<text fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" x="260" y="123">8</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="260" y="240">Transfer</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="260" y="253">Logistics</text>
+<!-- Clinical: 5 vars → 125px bar -->
+<rect fill="#ED7D31" height="125" rx="6" width="80" x="330" y="95"></rect>
+<text fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" x="370" y="160">5</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="370" y="240">Clinical</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="370" y="253">Information</text>
+<!-- Facility: 5 vars → 125px bar -->
+<rect fill="#375623" height="125" rx="6" width="80" x="440" y="95"></rect>
+<text fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" x="480" y="160">5</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="480" y="240">Facility</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="480" y="253">Information</text>
+<!-- Administrative: 6 vars → 150px bar -->
+<rect fill="#7030A0" height="150" rx="6" width="80" x="550" y="70"></rect>
+<text fill="#fff" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" x="590" y="148">6</text>
+<text fill="#333" font-family="Arial" font-size="10" text-anchor="middle" x="590" y="240">Administrative</text>
+</svg>
+</div>
+<!-- DONUT CHART -->
+<div class="chart-view" id="donut">
+<svg viewbox="0 0 700 280" width="100%" xmlns="http://www.w3.org/2000/svg">
+<!-- Donut: 30 total. Each segment proportional -->
+<!-- Patient Identity: 6/30 = 72° -->
+<!-- Transfer Logistics: 8/30 = 96° -->
+<!-- Clinical: 5/30 = 60° -->
+<!-- Facility: 5/30 = 60° -->
+<!-- Administrative: 6/30 = 72° -->
+<!-- Centre: 220,140 r=100 -->
+<!-- Start at -90° (top) -->
+<!-- Patient Identity: -90° to -18° (72°) -->
+<path d="M 220 40 A 100 100 0 0 1 318.5 111.5 L 220 140 Z" fill="#1F3864"></path>
+<!-- Transfer Logistics: -18° to 78° (96°) -->
+<path d="M 318.5 111.5 A 100 100 0 0 1 240.5 238.5 L 220 140 Z" fill="#00B0A0"></path>
+<!-- Clinical: 78° to 138° (60°) -->
+<path d="M 240.5 238.5 A 100 100 0 0 1 120.5 207.5 L 220 140 Z" fill="#ED7D31"></path>
+<!-- Facility: 138° to 198° (60°) -->
+<path d="M 120.5 207.5 A 100 100 0 0 1 121.5 72.5 L 220 140 Z" fill="#375623"></path>
+<!-- Administrative: 198° to 270° (72°) -->
+<path d="M 121.5 72.5 A 100 100 0 0 1 220 40 L 220 140 Z" fill="#7030A0"></path>
+<!-- Donut hole -->
+<circle cx="220" cy="140" fill="#fff" r="55"></circle>
+<text fill="#1F3864" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" x="220" y="133">30</text>
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" x="220" y="152">variables</text>
+<!-- Legend -->
+<rect fill="#1F3864" height="14" rx="2" width="14" x="380" y="50"></rect>
+<text fill="#333" font-family="Arial" font-size="12" x="400" y="62">Patient Identity (6 — 20%)</text>
+<rect fill="#00B0A0" height="14" rx="2" width="14" x="380" y="76"></rect>
+<text fill="#333" font-family="Arial" font-size="12" x="400" y="88">Transfer Logistics (8 — 27%)</text>
+<rect fill="#ED7D31" height="14" rx="2" width="14" x="380" y="102"></rect>
+<text fill="#333" font-family="Arial" font-size="12" x="400" y="114">Clinical Information (5 — 17%)</text>
+<rect fill="#375623" height="14" rx="2" width="14" x="380" y="128"></rect>
+<text fill="#333" font-family="Arial" font-size="12" x="400" y="140">Facility Information (5 — 17%)</text>
+<rect fill="#7030A0" height="14" rx="2" width="14" x="380" y="154"></rect>
+<text fill="#333" font-family="Arial" font-size="12" x="400" y="166">Administrative (6 — 20%)</text>
+</svg>
+</div>
+<div class="note">
+<strong>Note.</strong> All 30 variables must be collected for every cross-border patient transfer by the Point of Entry (PoE) Health Officer.
+    Data entered into the Border Transfer Register within 24 hours of transfer. Records retained for minimum 7 years.
+    Monthly reports submitted to CPRC State Health Department by the 5th of the following month.
+  </div>
+</div>
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.chart-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

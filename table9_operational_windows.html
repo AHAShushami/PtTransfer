@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table 7 — Operational Transfer Windows by Zone</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 28px 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(31,56,100,0.10); padding: 28px 32px 20px; max-width: 860px; margin: 0 auto; }
+.fig-label { font-size: 11px; font-weight: 700; color: #1F3864; letter-spacing: 0.07em; margin-bottom: 2px; }
+.fig-title { font-size: 14px; font-style: italic; color: #222; margin-bottom: 20px; line-height: 1.5; }
+.validity-box { background: linear-gradient(135deg,#1F3864,#2E74B5); color:#fff; border-radius:10px; padding:14px 18px; margin-bottom:20px; font-size:13px; line-height:1.6; }
+.validity-box strong { font-size:14px; display:block; margin-bottom:3px; }
+.zones-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px; }
+.zone-card { border-radius:10px; padding:14px 16px; border-left:5px solid; }
+.z1{background:#EBF3FB;border-color:#1F3864;} .z2{background:#E8F5F4;border-color:#00B0A0;}
+.z3{background:#FFF0E0;border-color:#ED7D31;} .z4{background:#F0EBF8;border-color:#7030A0;}
+.zone-name{font-size:13px;font-weight:700;margin-bottom:5px;}
+.z1 .zone-name{color:#1F3864;} .z2 .zone-name{color:#00695C;} .z3 .zone-name{color:#C05000;} .z4 .zone-name{color:#5B1F8A;}
+.zone-cp{font-size:12px;color:#555;margin-bottom:8px;line-height:1.5;}
+.badge{display:inline-block;padding:3px 10px;border-radius:10px;font-size:11px;font-weight:700;color:#fff;margin-right:5px;}
+.myt{background:#1F3864;} .thai{background:#00B0A0;}
+.note { margin-top:14px; font-size:11.5px; color:#666; border-top:1px solid #e0eaf4; padding-top:10px; line-height:1.6; }
+.note strong { color:#1F3864; }
+</style>
+</head>
+<body>
+<div class="card">
+<div class="fig-label">Table 7 — Chart</div>
+<div class="fig-title">Operational Hours and Transfer Windows by Border Checkpoint — All Zones</div>
+<div class="validity-box">
+<strong>⏱ 72-Hour Transfer Validity Rule</strong>
+    An approved transfer must be executed within 72 hours of official approval. If not initiated within this period, a new approval from the Operational Committee is required. Emergency cases outside the 09:00–18:00 MYT window are subject to a separate emergency pathway.
+  </div>
+<div class="zones-grid">
+<div class="zone-card z1">
+<div class="zone-name">Zone 1 — Kedah</div>
+<div class="zone-cp">📍 Bukit Kayu Hitam – Sadao</div>
+<span class="badge myt">09:00–18:00 MYT</span><span class="badge thai">08:00–17:00 Thai</span>
+</div>
+<div class="zone-card z2">
+<div class="zone-name">Zone 2 — Perlis</div>
+<div class="zone-cp">📍 Padang Besar – Padang Besar<br/>📍 Wang Kelian – Wang Prachan (Satun)</div>
+<span class="badge myt">09:00–18:00 MYT</span><span class="badge thai">08:00–17:00 Thai</span>
+</div>
+<div class="zone-card z3">
+<div class="zone-name">Zone 3 — Perak</div>
+<div class="zone-cp">📍 Pengkalan Hulu – Betong</div>
+<span class="badge myt">09:00–18:00 MYT</span><span class="badge thai">08:00–17:00 Thai</span>
+</div>
+<div class="zone-card z4">
+<div class="zone-name">Zone 4 — Kelantan</div>
+<div class="zone-cp">📍 Rantau Panjang – Sungai Kolok<br/>📍 Bukit Bunga – Buketa</div>
+<span class="badge myt">09:00–18:00 MYT</span><span class="badge thai">08:00–17:00 Thai</span>
+</div>
+</div>
+<!-- Gantt-style SVG bar chart -->
+<svg viewbox="0 0 700 220" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="middle" transform="rotate(-90,18,110)" x="18" y="110">Zone</text>
+<!-- X axis: 0–24 hours, mapped to x=120–660 (540px / 24 = 22.5px per hour) -->
+<line stroke="#bbb" stroke-width="1.5" x1="120" x2="120" y1="20" y2="185"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="120" x2="680" y1="185" y2="185"></line>
+<!-- Hour ticks -->
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="120" y="198">00:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="187" y="198">03:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="255" y="198">06:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="322" y="198">09:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="390" y="198">12:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="457" y="198">15:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="525" y="198">18:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="592" y="198">21:00</text>
+<text fill="#888" font-family="Arial" font-size="9" text-anchor="middle" x="660" y="198">24:00</text>
+<!-- Grid verticals -->
+<line stroke="#2E74B5" stroke-dasharray="4,3" stroke-width="1" x1="322" x2="322" y1="20" y2="185"></line>
+<line stroke="#C00000" stroke-dasharray="4,3" stroke-width="1" x1="525" x2="525" y1="20" y2="185"></line>
+<!-- Zone rows: y positions 30,65,100,135 height=25 -->
+<!-- Closed before: x=120 to 322 (202px) -->
+<!-- Open window: x=322 to 525 (203px) -->
+<!-- Closed after: x=525 to 660 (135px) -->
+<!-- Zone 1 -->
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="end" x="115" y="47">Zone 1</text>
+<rect fill="#e8eef6" height="25" rx="3" width="202" x="120" y="30"></rect>
+<rect fill="#1F3864" height="25" rx="3" width="203" x="322" y="30"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="423" y="47">09:00 – 18:00 MYT</text>
+<rect fill="#e8eef6" height="25" rx="3" width="135" x="525" y="30"></rect>
+<!-- Zone 2 -->
+<text fill="#00695C" font-family="Arial" font-size="11" font-weight="bold" text-anchor="end" x="115" y="82">Zone 2</text>
+<rect fill="#e8eef6" height="25" rx="3" width="202" x="120" y="65"></rect>
+<rect fill="#00B0A0" height="25" rx="3" width="203" x="322" y="65"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="423" y="82">09:00 – 18:00 MYT</text>
+<rect fill="#e8eef6" height="25" rx="3" width="135" x="525" y="65"></rect>
+<!-- Zone 3 -->
+<text fill="#C05000" font-family="Arial" font-size="11" font-weight="bold" text-anchor="end" x="115" y="117">Zone 3</text>
+<rect fill="#e8eef6" height="25" rx="3" width="202" x="120" y="100"></rect>
+<rect fill="#ED7D31" height="25" rx="3" width="203" x="322" y="100"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="423" y="117">09:00 – 18:00 MYT</text>
+<rect fill="#e8eef6" height="25" rx="3" width="135" x="525" y="100"></rect>
+<!-- Zone 4 -->
+<text fill="#5B1F8A" font-family="Arial" font-size="11" font-weight="bold" text-anchor="end" x="115" y="152">Zone 4</text>
+<rect fill="#e8eef6" height="25" rx="3" width="202" x="120" y="135"></rect>
+<rect fill="#7030A0" height="25" rx="3" width="203" x="322" y="135"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="423" y="152">09:00 – 18:00 MYT</text>
+<rect fill="#e8eef6" height="25" rx="3" width="135" x="525" y="135"></rect>
+<!-- Labels -->
+<text fill="#2E74B5" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="322" y="15">Opens 09:00</text>
+<text fill="#C00000" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="525" y="15">Closes 18:00</text>
+</svg>
+<div class="note">
+<strong>Note.</strong> MYT = Malaysia Time (UTC+8). Thai Time = UTC+7 (1 hour behind MYT).
+    All transfers must arrive at the border checkpoint no later than 18:00 MYT / 17:00 Thai Time.
+    Grey bars indicate closed periods. Coloured bars indicate the operational transfer window.
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Table 3 — Diagnosis Category, 2023–2025</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 28px 16px; }
+.card { background: #fff; border-radius: 12px; box-shadow: 0 4px 20px rgba(31,56,100,0.10); padding: 28px 32px 20px; max-width: 900px; margin: 0 auto; }
+.fig-label { font-size: 11px; font-weight: 700; color: #1F3864; letter-spacing: 0.07em; margin-bottom: 2px; }
+.fig-title { font-size: 14px; font-style: italic; color: #222; margin-bottom: 16px; line-height: 1.5; }
+.badge { display: inline-block; background: #E2EFDA; color: #375623; border-radius: 10px; padding: 2px 10px; font-size: 11px; font-weight: 700; margin-left: 8px; }
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+.tab { padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700; cursor: pointer; border: 2px solid #BDD7EE; color: #1F3864; background: #fff; }
+.tab.active { background: #1F3864; color: #fff; border-color: #1F3864; }
+.chart-view { display: none; }
+.chart-view.active { display: block; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #333; }
+.legend-box { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.note { margin-top: 14px; font-size: 11.5px; color: #666; border-top: 1px solid #e0eaf4; padding-top: 10px; line-height: 1.6; }
+.note strong { color: #1F3864; }
+</style>
+</head>
+<body>
+<div class="card">
+<div class="fig-label">Table 3 — Chart</div>
+<div class="fig-title">Diagnosis Criteria for Patient Transfer Through Point of Entry, 2023–2025 <span class="badge">↑ NCD: 32.5% → 59.7%</span></div>
+<div class="tabs">
+<button class="tab active" onclick="show('stacked',this)">Stacked Bar</button>
+<button class="tab" onclick="show('trend',this)">Trend Lines</button>
+<button class="tab" onclick="show('donut',this)">2025 Breakdown</button>
+</div>
+<!-- STACKED BAR -->
+<div class="chart-view active" id="stacked">
+<svg viewbox="0 0 700 320" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" transform="rotate(-90,18,160)" x="18" y="160">Number of Transfers</text>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="80" y1="30" y2="260"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="660" y1="260" y2="260"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="264">0</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="220" y2="220"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="224">20</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="180" y2="180"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="184">40</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="140" y2="140"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="144">60</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="660" y1="100" y2="100"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="104">80</text>
+<!-- 2023: Trauma=41(82px), NCD=25(50px), CD=8(16px), Prem=3(6px) total=77 -->
+<rect fill="#ED7D31" height="82" rx="3" width="70" x="120" y="178"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="222">41</text>
+<rect fill="#2E74B5" height="50" rx="3" width="70" x="120" y="128"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="156">25</text>
+<rect fill="#C00000" height="16" rx="3" width="70" x="120" y="112"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="155" y="123">8</text>
+<rect fill="#7030A0" height="6" rx="2" width="70" x="120" y="106"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="155" y="98">77</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="155" y="280">2023</text>
+<!-- 2024: Trauma=43(86px), NCD=46(92px), CD=2(4px), Prem=2(4px) total=93 -->
+<rect fill="#ED7D31" height="86" rx="3" width="70" x="300" y="174"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="220">43</text>
+<rect fill="#2E74B5" height="92" rx="3" width="70" x="300" y="82"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="131">46</text>
+<rect fill="#C00000" height="4" rx="2" width="70" x="300" y="78"></rect>
+<rect fill="#7030A0" height="4" rx="2" width="70" x="300" y="74"></rect>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="335" y="66">93</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="335" y="280">2024</text>
+<!-- 2025: Trauma=25(50px), NCD=37(74px), CD=0, Prem=0 total=62 -->
+<rect fill="#ED7D31" height="50" rx="3" width="70" x="480" y="210"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="238">25</text>
+<rect fill="#2E74B5" height="74" rx="3" width="70" x="480" y="136"></rect>
+<text fill="#fff" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="176">37</text>
+<text fill="#1F3864" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle" x="515" y="128">62</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="515" y="280">2025</text>
+<!-- NCD trend arrow -->
+<path d="M 190 128 Q 335 60 480 136" fill="none" stroke="#2E74B5" stroke-dasharray="5,3" stroke-width="2"></path>
+<text fill="#2E74B5" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="335" y="52">NCD rising ↑</text>
+</svg>
+<div class="legend">
+<div class="legend-item"><div class="legend-box" style="background:#ED7D31"></div>Injury / Trauma</div>
+<div class="legend-item"><div class="legend-box" style="background:#2E74B5"></div>Non-Communicable Disease</div>
+<div class="legend-item"><div class="legend-box" style="background:#C00000"></div>Communicable Disease</div>
+<div class="legend-item"><div class="legend-box" style="background:#7030A0"></div>Prematurity</div>
+</div>
+</div>
+<!-- TREND LINES -->
+<div class="chart-view" id="trend">
+<svg viewbox="0 0 700 300" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" transform="rotate(-90,18,150)" x="18" y="150">Number of Transfers</text>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="80" y1="20" y2="240"></line>
+<line stroke="#bbb" stroke-width="1.5" x1="80" x2="640" y1="240" y2="240"></line>
+<!-- Grid & labels: 0,10,20,30,40,50 -->
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="244">0</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="640" y1="196" y2="196"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="200">10</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="640" y1="152" y2="152"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="156">20</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="640" y1="108" y2="108"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="112">30</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="640" y1="64" y2="64"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="68">40</text>
+<line stroke="#e8eef6" stroke-width="1" x1="80" x2="640" y1="20" y2="20"></line>
+<text fill="#888" font-family="Arial" font-size="10" text-anchor="end" x="72" y="24">50</text>
+<!-- X positions: 2023=200, 2024=400, 2025=580 -->
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="200" y="262">2023</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="400" y="262">2024</text>
+<text fill="#222" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="580" y="262">2025</text>
+<!-- Scale: 1 unit = 4.4px, 0 at y=240 -->
+<!-- Trauma: 41→60px, 43→56px, 25→130px from bottom → y=180,184,130 -->
+<polyline fill="none" points="200,60 400,52 580,130" stroke="#ED7D31" stroke-width="3"></polyline>
+<circle cx="200" cy="60" fill="#ED7D31" r="6"></circle>
+<circle cx="400" cy="52" fill="#ED7D31" r="6"></circle>
+<circle cx="580" cy="130" fill="#ED7D31" r="6"></circle>
+<text fill="#ED7D31" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="200" y="50">41</text>
+<text fill="#ED7D31" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="400" y="42">43</text>
+<text fill="#ED7D31" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="580" y="120">25</text>
+<!-- NCD: 25→130px, 46→38px, 37→77px from bottom → y=110,38,77 -->
+<polyline fill="none" points="200,130 400,38 580,77" stroke="#2E74B5" stroke-width="3"></polyline>
+<circle cx="200" cy="130" fill="#2E74B5" r="6"></circle>
+<circle cx="400" cy="38" fill="#2E74B5" r="6"></circle>
+<circle cx="580" cy="77" fill="#2E74B5" r="6"></circle>
+<text fill="#2E74B5" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="200" y="148">25</text>
+<text fill="#2E74B5" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="400" y="28">46</text>
+<text fill="#2E74B5" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="580" y="67">37</text>
+<!-- CD: 8→205px, 2→231px, 0→240px -->
+<polyline fill="none" points="200,205 400,231 580,240" stroke="#C00000" stroke-dasharray="4,3" stroke-width="2"></polyline>
+<circle cx="200" cy="205" fill="#C00000" r="5"></circle>
+<circle cx="400" cy="231" fill="#C00000" r="5"></circle>
+<circle cx="580" cy="240" fill="#C00000" r="5"></circle>
+<text fill="#C00000" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="200" y="198">8</text>
+<text fill="#C00000" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="400" y="224">2</text>
+<text fill="#C00000" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="580" y="233">0</text>
+</svg>
+<div class="legend">
+<div class="legend-item"><div class="legend-box" style="background:#ED7D31"></div>Injury / Trauma</div>
+<div class="legend-item"><div class="legend-box" style="background:#2E74B5"></div>Non-Communicable Disease</div>
+<div class="legend-item"><div class="legend-box" style="background:#C00000"></div>Communicable Disease</div>
+</div>
+</div>
+<!-- DONUT 2025 -->
+<div class="chart-view" id="donut">
+<svg viewbox="0 0 700 300" width="100%" xmlns="http://www.w3.org/2000/svg">
+<text fill="#1F3864" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" x="350" y="24">2025 Transfer Breakdown (Total: 62 cases)</text>
+<!-- Donut: Trauma=25(40.3%), NCD=37(59.7%) -->
+<!-- Circle centre: 220,165 r=100 -->
+<!-- NCD: 59.7% = 214.9° arc, start=−90° -->
+<!-- Trauma: 40.3% = 145.1° arc -->
+<!-- NCD arc: from -90° to 124.9° (214.9°) -->
+<path d="M 220 65 A 100 100 0 1 1 163.5 248.5" fill="#2E74B5" stroke="none"></path>
+<!-- Trauma arc: from 124.9° to 270° (145.1°) -->
+<path d="M 163.5 248.5 A 100 100 0 0 1 220 65" fill="#ED7D31" stroke="none"></path>
+<!-- Inner circle (donut hole) -->
+<circle cx="220" cy="165" fill="#fff" r="55"></circle>
+<text fill="#1F3864" font-family="Arial" font-size="13" font-weight="bold" text-anchor="middle" x="220" y="158">62</text>
+<text fill="#888" font-family="Arial" font-size="11" text-anchor="middle" x="220" y="175">total cases</text>
+<!-- Labels -->
+<text fill="#2E74B5" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="100" y="120">NCD</text>
+<text fill="#2E74B5" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="100" y="136">59.7%</text>
+<text fill="#2E74B5" font-family="Arial" font-size="11" text-anchor="middle" x="100" y="152">(37 cases)</text>
+<text fill="#ED7D31" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="340" y="230">Trauma</text>
+<text fill="#ED7D31" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="340" y="246">40.3%</text>
+<text fill="#ED7D31" font-family="Arial" font-size="11" text-anchor="middle" x="340" y="262">(25 cases)</text>
+<!-- Comparison bar 2023 vs 2025 -->
+<text fill="#1F3864" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" x="530" y="60">NCD Trend</text>
+<rect fill="#e8eef6" height="22" rx="4" width="140" x="460" y="70"></rect>
+<rect fill="#2E74B5" height="22" rx="4" width="45" x="460" y="70"></rect>
+<text fill="#555" font-family="Arial" font-size="10" text-anchor="middle" x="530" y="85">2023: 32.5%</text>
+<rect fill="#e8eef6" height="22" rx="4" width="140" x="460" y="102"></rect>
+<rect fill="#2E74B5" height="22" rx="4" width="84" x="460" y="102"></rect>
+<text fill="#555" font-family="Arial" font-size="10" text-anchor="middle" x="530" y="117">2024: 49.5%</text>
+<rect fill="#e8eef6" height="22" rx="4" width="140" x="460" y="134"></rect>
+<rect fill="#2E74B5" height="22" rx="4" width="140" x="460" y="134"></rect>
+<text fill="#fff" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle" x="530" y="149">2025: 59.7% ↑</text>
+</svg>
+<div class="legend">
+<div class="legend-item"><div class="legend-box" style="background:#2E74B5"></div>Non-Communicable Disease (59.7%)</div>
+<div class="legend-item"><div class="legend-box" style="background:#ED7D31"></div>Injury / Trauma (40.3%)</div>
+</div>
+</div>
+<div class="note">
+<strong>Note.</strong> NCDs rose from 32.5% in 2023 to 59.7% in 2025, overtaking trauma as the leading clinical indication.
+    Communicable Disease transfers declined to zero by 2025. BKH = Bukit Kayu Hitam; RP = Rantau Panjang; PH = Pengkalan Hulu; PB = Padang Besar.
+  </div>
+</div>
+<script>
+function show(id, btn) {
+  document.querySelectorAll('.chart-view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>

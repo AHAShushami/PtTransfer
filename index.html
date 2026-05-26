@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Charts &amp; Figures — Malaysia–Thailand Cross-Border Patient Transfer Guideline 2026</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; min-height: 100vh; }
+.header { background: linear-gradient(135deg, #1F3864 0%, #2E74B5 100%); color: #fff; padding: 36px 40px 28px; }
+.header-badge { display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; padding: 4px 14px; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 12px; }
+.header h1 { font-size: 22px; font-weight: 700; line-height: 1.3; margin-bottom: 6px; }
+.header .subtitle { font-size: 13px; color: rgba(255,255,255,0.80); margin-bottom: 16px; }
+.header-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+.meta-item { font-size: 12px; color: rgba(255,255,255,0.75); }
+.meta-item strong { color: #fff; }
+.main { max-width: 1100px; margin: 0 auto; padding: 32px 20px 50px; }
+.section-title { font-size: 12px; font-weight: 700; color: #1F3864; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px; padding-bottom: 7px; border-bottom: 2px solid #BDD7EE; }
+.charts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; margin-bottom: 36px; }
+.chart-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(31,56,100,0.08); overflow: hidden; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; }
+.chart-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(31,56,100,0.15); }
+.chart-card-header { padding: 14px 18px 10px; border-bottom: 1px solid #f0f4f8; display: flex; align-items: flex-start; gap: 12px; }
+.chart-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #fff; }
+.chart-info .chart-label { font-size: 10px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 2px; }
+.chart-info .chart-name { font-size: 13px; font-weight: 600; color: #1F3864; line-height: 1.4; }
+.chart-card-body { padding: 10px 18px 14px; }
+.chart-desc { font-size: 12px; color: #555; line-height: 1.6; margin-bottom: 10px; }
+.chart-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.tag { display: inline-block; padding: 2px 9px; border-radius: 10px; font-size: 10px; font-weight: 600; }
+.tag-bar { background: #EBF3FB; color: #1F3864; }
+.tag-line { background: #E8F5F4; color: #00695C; }
+.tag-donut { background: #FFF0E0; color: #C05000; }
+.tag-gantt { background: #E2EFDA; color: #375623; }
+.tag-flow { background: #F0EBF8; color: #5B1F8A; }
+.tag-table { background: #FFF2CC; color: #7D6000; }
+.chart-card-footer { padding: 9px 18px; background: #f8fbff; border-top: 1px solid #f0f4f8; display: flex; align-items: center; justify-content: space-between; }
+.open-btn { font-size: 12px; font-weight: 700; color: #2E74B5; }
+.open-btn::after { content: ' →'; }
+.table-ref { font-size: 10px; color: #888; font-style: italic; }
+.preview-wrap { display: none; width: 100%; border-top: 2px solid #BDD7EE; }
+.preview-wrap.open { display: block; }
+.preview-wrap iframe { width: 100%; height: 520px; border: none; background: #f4f7fb; }
+.preview-close { display: flex; align-items: center; justify-content: space-between; padding: 7px 18px; background: #EBF3FB; }
+.preview-close span { font-size: 12px; color: #1F3864; font-weight: 600; }
+.preview-close button { background: none; border: 1px solid #BDD7EE; border-radius: 6px; padding: 3px 10px; font-size: 11px; color: #1F3864; cursor: pointer; font-weight: 600; }
+.footer { text-align: center; padding: 20px; font-size: 11px; color: #888; border-top: 1px solid #e0eaf4; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="header">
+<div class="header-badge">VERSION 3.0 · MAY 2026</div>
+<h1>Malaysia–Thailand Cross-Border Patient Transfer Guideline</h1>
+<div class="subtitle">Interactive Charts &amp; Figures — All Tables Visualised (Self-Contained, No Internet Required)</div>
+<div class="header-meta">
+<div class="meta-item"><strong>Scope:</strong> Kedah · Perlis · Perak · Kelantan (Malaysia)</div>
+<div class="meta-item"><strong>Charts:</strong> 6 interactive visualisations</div>
+<div class="meta-item"><strong>Data:</strong> 2023–2025 epidemiological records</div>
+<div class="meta-item"><strong>Publisher:</strong> Ministry of Health Malaysia</div>
+</div>
+</div>
+<div class="main">
+<div class="section-title">📊 Epidemiological Data Charts (Tables 1–3)</div>
+<div class="charts-grid">
+<div class="chart-card" onclick="togglePreview(this,'table3_movement_status.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#1F3864;">T1</div>
+<div class="chart-info">
+<div class="chart-label">Table 1</div>
+<div class="chart-name">Patient Transfer by Movement Status, 2023–2025</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Stacked bar chart — Inbound (Import), Outbound (Export), and Transit transfers. Inbound comprised 63.7%–75.8% annually. Peak total: 91 cases in 2024.</div>
+<div class="chart-tags"><span class="tag tag-bar">Stacked Bar</span><span class="tag tag-table">Table 1</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 1 · Movement Status</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 1 — Movement Status</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+<div class="chart-card" onclick="togglePreview(this,'table4_hospital_type.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#2E74B5;">T2</div>
+<div class="chart-info">
+<div class="chart-label">Table 2</div>
+<div class="chart-name">Referring &amp; Accepting Hospital Type, 2023–2025</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Toggle between Referring and Accepting hospital categories. Thai Government dominated referring (~64% by 2025). Malaysian private hospitals surged to 41.9% accepting in 2024.</div>
+<div class="chart-tags"><span class="tag tag-bar">Stacked Bar</span><span class="tag tag-bar">Toggle</span><span class="tag tag-table">Table 2</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 2 · Hospital Type</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 2 — Hospital Type</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+<div class="chart-card" onclick="togglePreview(this,'table5_diagnosis.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#ED7D31;">T3</div>
+<div class="chart-info">
+<div class="chart-label">Table 3</div>
+<div class="chart-name">Diagnosis Category, 2023–2025</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Three views: Stacked Bar, Trend Lines, 2025 Donut. NCDs rose from 32.5% (2023) to 59.7% (2025), overtaking trauma as the leading clinical indication.</div>
+<div class="chart-tags"><span class="tag tag-bar">Stacked Bar</span><span class="tag tag-line">Trend</span><span class="tag tag-donut">Donut</span><span class="tag tag-table">Table 3</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 3 · Diagnosis</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 3 — Diagnosis Category</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+</div>
+<div class="section-title">🔄 Operational &amp; Governance Charts (Tables 5–7)</div>
+<div class="charts-grid">
+<div class="chart-card" onclick="togglePreview(this,'table7_chronology.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#375623;">T5</div>
+<div class="chart-info">
+<div class="chart-label">Table 5</div>
+<div class="chart-name">Chronology of Development, 2016–2026</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Colour-coded timeline of 13 key milestones from the 2016 Kedah-Songkhla simulation to the 17 May 2026 finalisation meeting.</div>
+<div class="chart-tags"><span class="tag tag-gantt">Timeline</span><span class="tag tag-table">Table 5</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 5 · Chronology</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 5 — Chronology</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+<div class="chart-card" onclick="togglePreview(this,'table8_transfer_phases.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#00B0A0;">T6</div>
+<div class="chart-info">
+<div class="chart-label">Table 6</div>
+<div class="chart-name">Standardised Transfer Execution Phases</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Visual phase diagram: Assessment &amp; Referral → Coordination &amp; Approval → Transfer Execution. Shows responsible parties and mandated actions per phase.</div>
+<div class="chart-tags"><span class="tag tag-flow">Phase Diagram</span><span class="tag tag-table">Table 6</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 6 · Transfer Phases</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 6 — Transfer Phases</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+<div class="chart-card" onclick="togglePreview(this,'table9_operational_windows.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#7030A0;">T7</div>
+<div class="chart-info">
+<div class="chart-label">Table 7</div>
+<div class="chart-name">Operational Transfer Windows by Zone</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Zone cards and Gantt-style bar showing the 09:00–18:00 MYT window across all 4 zones and 6 checkpoints. Includes 72-hour validity rule and emergency pathway note.</div>
+<div class="chart-tags"><span class="tag tag-gantt">Gantt Bar</span><span class="tag tag-table">Table 7</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 7 · Operational Windows</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 7 — Operational Windows</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+</div>
+<div class="section-title">📋 Data Collection Chart (Table 9)</div>
+<div class="charts-grid">
+<div class="chart-card" onclick="togglePreview(this,'table11_data_variables.html')">
+<div class="chart-card-header">
+<div class="chart-num" style="background:#C00000;">T9</div>
+<div class="chart-info">
+<div class="chart-label">Table 9</div>
+<div class="chart-name">Core Data Variables — 30 Variables, 5 Domains</div>
+</div>
+</div>
+<div class="chart-card-body">
+<div class="chart-desc">Bar chart and donut showing 30 mandatory variables across 5 domains: Patient Identity (6), Transfer Logistics (8), Clinical (5), Facility (5), Administrative (6).</div>
+<div class="chart-tags"><span class="tag tag-bar">Bar Chart</span><span class="tag tag-donut">Donut</span><span class="tag tag-table">Table 9</span></div>
+</div>
+<div class="chart-card-footer"><span class="open-btn">View Chart</span><span class="table-ref">Table 9 · Data Variables</span></div>
+<div class="preview-wrap">
+<div class="preview-close"><span>Table 9 — Data Variables</span><button onclick="closePreview(event,this)">✕ Close</button></div>
+<iframe loading="lazy"></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+  Malaysia–Thailand Cross-Border Patient Transfer Guideline · Version 3.0 · May 2026 · Ministry of Health Malaysia
+</div>
+<script>
+function togglePreview(card, src) {
+  const preview = card.querySelector('.preview-wrap');
+  if (preview.classList.contains('open')) { preview.classList.remove('open'); return; }
+  document.querySelectorAll('.preview-wrap.open').forEach(p => p.classList.remove('open'));
+  const iframe = preview.querySelector('iframe');
+  if (!iframe.src || iframe.src === 'about:blank') iframe.src = src;
+  preview.classList.add('open');
+  setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+}
+function closePreview(event, btn) {
+  event.stopPropagation();
+  btn.closest('.preview-wrap').classList.remove('open');
+}
+</script>
+</body>
+</html>
